@@ -1,4 +1,4 @@
-FROM rhel8
+FROM rhel8.3:latest
 MAINTAINER tjkim
 RUN yum install -y httpd
 EXPOSE 80
