@@ -1,6 +1,7 @@
-FROM httpd:latest
+FROM rhel7.3:latest
 MAINTAINER tjkim
-EXPOSE 8080
+RUN yum install -y httpd
+EXPOSE 80
 COPY ./src /var/www/html/
 USER apache
 ENTRYPOINT ["/usr/sbin/httpd"]
